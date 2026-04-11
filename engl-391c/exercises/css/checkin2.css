@@ -1,0 +1,68 @@
+/* text styles */
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: #FCF3EA;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 2.5rem;
+    color: #5F5449;
+    line-height: 1.25;
+}
+
+h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.75rem;
+    color: #5F5449;
+    line-height: 1.25;
+}
+
+h3 {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.75rem;
+    color: #5F5449;
+    line-height: 1.25;
+}
+
+/* image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* space */
+hr {
+    border: none;
+    height: 2.25px;
+    background-color: #AFA193;
+    margin: 1.5rem 0;
+    padding: 0.05rem 0;
+}
+
+/* link styles */
+a:link { color: #2F241A; }
+
+a:active, a:focus { color: #2F241A; }
+
+a:visited {
+    color: #3B2E22;
+    font-style: italic;
+}
+
+a:hover {
+    color: #4A3A2A;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* list styles */
+ul li {
+    color: #5F5449;
+}
+
+ol li {
+    color: #5F5449;
+}
