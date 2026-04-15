@@ -456,6 +456,12 @@ ul {
   height: 40px;
   background: #F5F5F5;
   margin: 8px auto 0;
+  animation-name: scroll-pulse;
+  animation-duration: 1.4s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
 .featured-drinks {
@@ -1019,12 +1025,289 @@ ul {
 }
 
 /* Static classes retained for existing HTML */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-pulse {
+  0% {
+    opacity: 0.45;
+    transform: scaleY(0.85);
+    transform-origin: top;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
 .reveal {
-  opacity: 1;
+  opacity: 0;
+  transform: translateY(16px);
+  animation-name: fade-in-up;
+  animation-duration: 760ms;
+  animation-delay: 120ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.hero__eyebrow,
+.hero__title,
+.hero__tagline,
+.hero__ctas,
+.hero__scroll,
+.about-hero__inner,
+.visit-hero .container > .section-label,
+.visit-hero .container > .visit-hero__title,
+.visit-hero .container > .visit-hero__sub,
+.amai-header,
+.amai-hero,
+.menu-cluster,
+.cta-band .container > .cta-band__title,
+.cta-band .container > .cta-band__sub,
+.cta-band .container > .btn,
+.closing-section .container > .closing-section__quote,
+.closing-section .container > .closing-section__sub,
+.closing-section .container > div,
+.social-list .social-pill {
+  opacity: 0;
+  transform: translateY(16px);
+  animation-name: fade-in-up;
+  animation-duration: 760ms;
+  animation-delay: 80ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.hero__title {
+  animation-delay: 180ms;
+}
+
+.hero__tagline {
+  animation-delay: 280ms;
+}
+
+.hero__ctas {
+  animation-delay: 360ms;
+}
+
+.hero__scroll {
+  animation-delay: 460ms;
+}
+
+.about-hero__inner,
+.visit-hero .container > .visit-hero__title,
+.amai-hero,
+.cta-band .container > .cta-band__title,
+.closing-section .container > .closing-section__quote {
+  animation-delay: 140ms;
+}
+
+.visit-hero .container > .visit-hero__sub,
+.cta-band .container > .cta-band__sub,
+.closing-section .container > .closing-section__sub {
+  animation-delay: 220ms;
+}
+
+.menu-cluster {
+  animation-delay: 180ms;
+}
+
+.menu-cluster + .menu-cluster {
+  animation-delay: 260ms;
+}
+
+.menu-cluster + .menu-cluster + .menu-cluster {
+  animation-delay: 340ms;
+}
+
+.menu-cluster + .menu-cluster + .menu-cluster + .menu-cluster {
+  animation-delay: 420ms;
+}
+
+.menu-cluster + .menu-cluster + .menu-cluster + .menu-cluster + .menu-cluster {
+  animation-delay: 500ms;
+}
+
+.drinks-grid .card.reveal:nth-child(1),
+.values-grid .value-card.reveal:nth-child(1),
+.visit-info .info-card.reveal:nth-child(1),
+.social-list .social-pill:nth-child(1) {
+  animation-delay: 120ms;
+}
+
+.drinks-grid .card.reveal:nth-child(2),
+.values-grid .value-card.reveal:nth-child(2),
+.visit-info .info-card.reveal:nth-child(2),
+.social-list .social-pill:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.drinks-grid .card.reveal:nth-child(3),
+.values-grid .value-card.reveal:nth-child(3),
+.visit-info .info-card.reveal:nth-child(3),
+.social-list .social-pill:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+.drinks-grid .card.reveal:nth-child(4) {
+  animation-delay: 420ms;
+}
+
+.space-split .reveal:nth-child(1),
+.meaning-split .reveal:nth-child(1),
+.concept-grid .reveal:nth-child(1) {
+  animation-delay: 140ms;
+}
+
+.space-split .reveal:nth-child(2),
+.meaning-split .reveal:nth-child(2),
+.concept-grid .reveal:nth-child(2) {
+  animation-delay: 260ms;
+}
+
+/* Page-specific pacing */
+.home-page .hero__eyebrow,
+.home-page .hero__title,
+.home-page .hero__tagline,
+.home-page .hero__ctas,
+.home-page .hero__scroll,
+.home-page .reveal,
+.home-page .cta-band .container > .cta-band__title,
+.home-page .cta-band .container > .cta-band__sub,
+.home-page .cta-band .container > .btn {
+  animation-duration: 680ms;
+  animation-timing-function: cubic-bezier(0.2, 0.9, 0.22, 1);
+}
+
+.home-page .hero__title {
+  animation-delay: 140ms;
+}
+
+.home-page .hero__tagline {
+  animation-delay: 220ms;
+}
+
+.home-page .hero__ctas {
+  animation-delay: 300ms;
+}
+
+.home-page .hero__scroll {
+  animation-delay: 380ms;
+}
+
+.about-page .about-hero__inner,
+.about-page .reveal,
+.about-page .values-grid .value-card,
+.about-page .closing-section .container > .closing-section__quote,
+.about-page .closing-section .container > .closing-section__sub,
+.about-page .closing-section .container > div {
+  animation-duration: 820ms;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.about-page .about-hero__inner {
+  animation-delay: 160ms;
+}
+
+.about-page .meaning-split .reveal:nth-child(1),
+.about-page .concept-grid .reveal:nth-child(1) {
+  animation-delay: 180ms;
+}
+
+.about-page .meaning-split .reveal:nth-child(2),
+.about-page .concept-grid .reveal:nth-child(2) {
+  animation-delay: 320ms;
+}
+
+.about-page .values-grid .value-card.reveal:nth-child(1) {
+  animation-delay: 180ms;
+}
+
+.about-page .values-grid .value-card.reveal:nth-child(2) {
+  animation-delay: 290ms;
+}
+
+.about-page .values-grid .value-card.reveal:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.visit-page .visit-hero .container > .section-label,
+.visit-page .visit-hero .container > .visit-hero__title,
+.visit-page .visit-hero .container > .visit-hero__sub,
+.visit-page .reveal,
+.visit-page .social-list .social-pill,
+.visit-page .directions-cta.reveal {
+  animation-duration: 730ms;
+  animation-timing-function: cubic-bezier(0.22, 0.95, 0.3, 1);
+}
+
+.visit-page .visit-hero .container > .visit-hero__title {
+  animation-delay: 130ms;
+}
+
+.visit-page .visit-hero .container > .visit-hero__sub {
+  animation-delay: 200ms;
+}
+
+.visit-page .visit-info .info-card.reveal:nth-child(1) {
+  animation-delay: 140ms;
+}
+
+.visit-page .visit-info .info-card.reveal:nth-child(2) {
+  animation-delay: 230ms;
+}
+
+.visit-page .visit-info .info-card.reveal:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+.visit-page .directions-cta.reveal {
+  animation-delay: 240ms;
 }
 
 .is-visible {
   opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-line,
+  .reveal,
+  .hero__eyebrow,
+  .hero__title,
+  .hero__tagline,
+  .hero__ctas,
+  .hero__scroll,
+  .about-hero__inner,
+  .visit-hero .container > .section-label,
+  .visit-hero .container > .visit-hero__title,
+  .visit-hero .container > .visit-hero__sub,
+  .amai-header,
+  .amai-hero,
+  .menu-cluster,
+  .cta-band .container > .cta-band__title,
+  .cta-band .container > .cta-band__sub,
+  .cta-band .container > .btn,
+  .closing-section .container > .closing-section__quote,
+  .closing-section .container > .closing-section__sub,
+  .closing-section .container > div,
+  .social-list .social-pill {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Menu rework page */

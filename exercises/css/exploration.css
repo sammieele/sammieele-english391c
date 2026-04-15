@@ -1,0 +1,134 @@
+@font-face {
+	font-family: 'Sofia Pro';
+	src: local('Sofia Pro Regular'), local('Sofia Pro');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Sofia Pro';
+	src: local('Sofia Pro Semibold'), local('Sofia Pro SemiBold');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Sofia Pro';
+	src: local('Sofia Pro Bold');
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Sofia Pro', 'Segoe UI', Arial, sans-serif;
+	background-color: #F5F5F5;
+	color: #202124;
+	margin: 0;
+	padding: 48px 32px;
+}
+
+h1 {
+	color: #202124;
+	margin-bottom: 16px;
+}
+
+p {
+	color: #202124;
+	max-width: 60ch;
+	margin-bottom: 24px;
+}
+
+#grad1 {
+	height: 200px;
+	background-color: #E1E0DD;
+	background-image: linear-gradient(180deg, #202124 0%, #202124 35%, #D2D0CC 72%, #E1E0DD 100%);
+	border: 1px solid #D2D0CC;
+	border-radius: 16px;
+	box-shadow: 0 12px 24px rgba(225, 224, 221, 0.9);
+	animation: none;
+}
+
+input[type=checkbox] {
+  accent-color: #202124;
+}
+
+input[type=radio] {
+  accent-color: #5B595A;
+}
+
+input[type=range] {
+  accent-color: #D2D0CC;
+}
+
+progress {
+  accent-color: hsl(45, 13%, 6%);
+}
+
+#div1, #div2, #div3, #div4, #div5 {
+  width: 100px;
+  height: 50px;
+  background-color: #202124;
+  color: #E1E0DD;
+  font-weight: bold;
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes myAnimation {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.button {
+  background-color: #202124;
+  border: 1px solid #202124;
+  border-radius: 999px;
+  color: #F5F5F5;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: #5B595A;
+  border-color: #5B595A;
+}
