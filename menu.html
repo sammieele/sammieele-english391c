@@ -15,7 +15,7 @@
     <nav class="amai-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="menu.html" class="is-current">Menu</a>
+      <span class="is-current" aria-current="page">Menu</span>
       <a href="visit.html">Visit</a>
     </nav>
   </header>
@@ -125,9 +125,11 @@
       <div class="footer__grid">
 
         <div>
-          <p class="footer__brand-name display">
-            <img src="images/amai-logo-white.png" alt="" class="brand-logo brand-logo--footer">
-          </p>
+          <div class="footer__brand-name display">
+            <a href="index.html" class="footer__brand-link" aria-label="AMAI Cafe home">
+              <img src="images/amai-logo-white.png" alt="AMAI Cafe logo" class="brand-logo brand-logo--footer">
+            </a>
+          </div>
           <p class="footer__tagline">Sweet in Japanese.<br>A café for coffee, boba, and the spaces in between.</p>
         </div>
 
