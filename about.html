@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — AMAI Café</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="about-page">
 
@@ -12,9 +13,9 @@
   <nav class="site-nav">
     <div class="container nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="images/amai-logo-white.png" alt="AMAI" class="brand-logo brand-logo--nav" />
+        <img src="images/amai-logo-white.png" alt="AMAI Café – return to home page" class="brand-logo brand-logo--nav">
       </a>
-      <ul class="nav__links" id="nav-links" role="list">
+      <ul class="nav__links" id="nav-links">
         <li><a href="index.html"  class="nav__link">Home</a></li>
         <li><a href="menu.html"   class="nav__link">Menu</a></li>
         <li><a href="about.html"  class="nav__link is-current">About</a></li>
@@ -32,7 +33,7 @@
           <div>
             <span class="section-label">Who we are</span>
             <h1 class="about-hero__title display">About</h1>
-            <img src="images/amai-logo-black.png" alt="AMAI" class="brand-logo brand-logo--about" />
+            <img src="images/amai-logo-black.png" alt="" class="brand-logo brand-logo--about">
             <p class="about-hero__sub">
               More than a café — a concept built around sweetness, slowness,
               and the kind of space where you actually want to stay.
@@ -46,14 +47,16 @@
     </header>
 
     <!-- ▸ WHAT "AMAI" MEANS -->
-    <section class="section meaning-section">
+    <section class="section meaning-section" aria-labelledby="meaning-heading">
       <div class="container">
+        <h2 class="visually-hidden" id="meaning-heading">What AMAI Means</h2>
         <div class="meaning-split">
 
           <div class="meaning-split__image reveal">
             <div class="img-placeholder img-placeholder--about" style="height:100%">
-              <span class="placeholder-icon">🌸</span>
+              <img src="images/about-the-name.jpg" alt="A cup of coffee resting on a wooden table, viewed from above" class="img-placeholder__image">
             </div>
+            <p class="photo-credit">Photo by <a href="https://unsplash.com/@nate_dumlao" target="_blank" rel="noopener">Nathan Dumlao</a> from <a href="https://unsplash.com/photos/a-cup-of-coffee-sitting-on-top-of-a-wooden-table-2kkxilGY8GA" target="_blank" rel="noopener">Unsplash</a></p>
           </div>
 
           <div class="reveal">
@@ -104,8 +107,9 @@
 
           <div class="concept-grid__image reveal">
             <div class="img-placeholder img-placeholder--space" style="height:100%">
-              <span class="placeholder-icon">📖</span>
+              <img src="images/about-the-concept.jpg" alt="The interior of a cozy coffee shop with soft ambient lighting and open seating" class="img-placeholder__image">
             </div>
+            <p class="photo-credit">Photo by <a href="https://www.pexels.com/@ekaterina-bolovtsova" target="_blank" rel="noopener">Ekaterina Bolovtsova</a> from <a href="https://www.pexels.com/photo/photo-of-a-coffee-shop-interior-10008031/" target="_blank" rel="noopener">Pexels</a></p>
           </div>
 
         </div>
@@ -153,34 +157,11 @@
       </div>
     </section>
 
-    <!-- ▸ IMAGE STRIP
-    <section class="section">
-      <div class="container">
-        <div class="image-strip reveal">
-          <div class="strip-item">
-            <div class="img-placeholder img-placeholder--hero" style="height:100%">
-              <span class="placeholder-icon">🏮</span>
-            </div>
-          </div>
-          <div class="strip-item">
-            <div class="img-placeholder img-placeholder--drink-2" style="height:100%">
-              <span class="placeholder-icon">☕</span>
-            </div>
-          </div>
-          <div class="strip-item">
-            <div class="img-placeholder img-placeholder--drink-4" style="height:100%">
-              <span class="placeholder-icon">📚</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
 
-    <!-- ▸ CLOSING STATEMENT -->
-    <section class="closing-section">
+    <section class="closing-section" aria-labelledby="closing-heading">
       <div class="container">
-        <blockquote class="closing-section__quote display" id="closing-heading">
+        <h2 class="visually-hidden" id="closing-heading">Closing</h2>
+        <blockquote class="closing-section__quote display">
           "Sweet moments are worth making space for."
         </blockquote>
         <p class="closing-section__sub">Come find yours at AMAI.</p>
@@ -188,6 +169,7 @@
           <a href="menu.html"  class="btn btn--outline-light">View Menu</a>
           <a href="visit.html" class="btn btn--primary">Plan Your Visit</a>
         </div>
+        <p class="photo-credit photo-credit--on-dark closing-section__credit">Photo by <a href="https://www.pexels.com/@fotios-photos" target="_blank" rel="noopener">Lisa Fotios</a> from <a href="https://www.pexels.com/photo/modern-cafe-interior-14994661/" target="_blank" rel="noopener">Pexels</a></p>
       </div>
     </section>
 
@@ -199,13 +181,13 @@
       <div class="footer__grid">
         <div>
           <p class="footer__brand-name display">
-            <img src="images/amai-logo-white.png" alt="AMAI" class="brand-logo brand-logo--footer" />
+            <img src="images/amai-logo-white.png" alt="" class="brand-logo brand-logo--footer">
           </p>
           <p class="footer__tagline">Sweet in Japanese.<br>A café for coffee, boba, and the spaces in between.</p>
         </div>
         <div>
           <h3 class="footer__heading">Navigate</h3>
-          <ul class="footer__list" role="list">
+          <ul class="footer__list">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="about.html">About</a></li>

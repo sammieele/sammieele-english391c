@@ -345,6 +345,35 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.img-placeholder__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.24) saturate(0.66) contrast(1.08) brightness(0.9);
+}
+
+.photo-credit {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(32, 33, 36, 0.62);
+}
+
+.photo-credit--card {
+  margin-top: 12px;
+}
+
+.photo-credit--on-dark {
+  color: rgba(245, 245, 245, 0.74);
+}
+
+.photo-credit a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .img-placeholder--hero {
@@ -398,8 +427,15 @@ ul {
   inset: 0;
 }
 
-.hero__bg .img-placeholder--hero {
+.hero__bg .img-placeholder--hero,
+.hero__bg-image {
   height: 100%;
+}
+
+.hero__bg-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero__overlay {
@@ -491,6 +527,11 @@ ul {
 
 .space-split__image {
   width: 48%;
+  overflow: visible;
+  aspect-ratio: auto;
+}
+
+.space-split__image .img-placeholder {
   border-radius: 20px;
   overflow: hidden;
   aspect-ratio: 5/4;
@@ -517,6 +558,11 @@ ul {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.cta-band .container {
+  position: relative;
+  z-index: 1;
 }
 
 .cta-band__title {
@@ -717,6 +763,11 @@ ul {
 
 .meaning-split__image {
   width: 48%;
+  overflow: visible;
+  aspect-ratio: auto;
+}
+
+.meaning-split__image .img-placeholder {
   border-radius: 20px;
   overflow: hidden;
   aspect-ratio: 4/3;
@@ -762,6 +813,11 @@ ul {
 .concept-grid__image {
   width: 48%;
   order: 1;
+  overflow: visible;
+  aspect-ratio: auto;
+}
+
+.concept-grid__image .img-placeholder {
   border-radius: 20px;
   overflow: hidden;
   aspect-ratio: 3/4;
@@ -834,6 +890,17 @@ ul {
   padding-bottom: 120px;
 }
 
+.closing-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__credit,
+.cta-band__credit,
+.closing-section__credit {
+  margin-top: 16px;
+}
+
 .closing-section__quote {
   color: #E1E0DD;
   font-size: 44px;
@@ -895,6 +962,14 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.map-block__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.24) saturate(0.66) contrast(1.08) brightness(0.9);
 }
 
 .map-block__icon {
@@ -1272,6 +1347,54 @@ ul {
 
 .visit-page .visit-info .info-card.reveal:nth-child(3) {
   animation-delay: 320ms;
+}
+
+.home-page .cta-band {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.home-page .cta-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/home-plan-your-visit.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.82) contrast(0.95);
+  transform: scale(1.02);
+}
+
+.home-page .cta-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(32,33,36,0.72) 0%, rgba(32,33,36,0.8) 100%);
+}
+
+.about-page .closing-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.about-page .closing-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("images/about-sweet-moments-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: saturate(0.86) contrast(0.92);
+  transform: scale(1.02);
+}
+
+.about-page .closing-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(32,33,36,0.7) 0%, rgba(32,33,36,0.82) 100%);
 }
 
 .visit-page .directions-cta.reveal {
