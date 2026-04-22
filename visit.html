@@ -71,7 +71,13 @@
             <!-- Hours -->
             <article class="info-card reveal">
               <h2 class="info-card__heading" id="hours-heading">Hours of Operation</h2>
-              <table class="hours-table">
+              <table class="hours-table" aria-labelledby="hours-heading">
+                <thead>
+                  <tr class="hours-row">
+                    <th scope="col" class="hours-row__day">Day</th>
+                    <th scope="col" class="hours-row__time">Hours</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr class="hours-row">
                     <th scope="row" class="hours-row__day">Monday</th>
