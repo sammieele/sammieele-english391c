@@ -303,6 +303,9 @@ ul {
 .footer__hours-item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  width: min(100%, 11rem);
+  column-gap: 10px;
 }
 
 .footer__bottom {
@@ -918,6 +921,12 @@ ul {
   margin-bottom: 16px;
 }
 
+.value-card__icon .ph {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 1;
+}
+
 .value-card__title {
   font-size: 26px;
   margin-bottom: 10px;
@@ -1127,12 +1136,22 @@ ul {
   margin-right: 10px;
 }
 
+.contact-item__icon .ph {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
 .social-list {
   display: flex;
   flex-wrap: wrap;
 }
 
 .social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: #E1E0DD;
   border: 1px solid #D2D0CC;
   border-radius: 999px;
@@ -1140,6 +1159,18 @@ ul {
   padding: 8px 14px;
   margin-right: 8px;
   margin-bottom: 8px;
+}
+
+.social-pill__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-pill__icon .ph {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .directions-cta {
@@ -1584,19 +1615,25 @@ ul {
   text-align: center;
 }
 
-.menu-cluster h2::after {
-  content: "●●○●●○●●●○●●●●○●●●○●";
+.menu-cluster__divider {
   display: block;
-  letter-spacing: 6px;
+  width: min(180px, 70%);
+  height: 8px;
   font-size: 8px;
   margin-top: 8px;
-  color: #202124;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: radial-gradient(circle, #202124 42%, transparent 44%);
+  background-size: 12px 8px;
+  background-position: center;
+  background-repeat: repeat-x;
+  opacity: 0.82;
 }
 
 .menu-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 24px;
+  column-gap: 64px;
   border-top: 1px solid #D2D0CC;
   padding-top: 18px;
 }
@@ -1612,14 +1649,15 @@ ul {
 .menu-line-item header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: baseline;
+  width: min(100%, 20rem);
+  column-gap: 10px;
 }
 
 .menu-line-item h3 {
   color: #202124;
   font-size: 16px;
   font-weight: 600;
-  flex: 1;
 }
 
 .menu-line-item span {
